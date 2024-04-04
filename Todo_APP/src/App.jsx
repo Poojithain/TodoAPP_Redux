@@ -28,6 +28,7 @@ export default function App() {
           onChange={(e) => setTodoTitle(e.target.value)} 
           style={{ width: '300px', padding: '10px', borderRadius: '5px', border: '1px solid #ccc' }} 
         />
+        
         <button style={{backgroundColor:'green', marginLeft:20}}onClick={handleTodo}>Add</button>
       </div>
       <TodoList />

@@ -6,7 +6,7 @@ import './Todo.css';
 // eslint-disable-next-line react/prop-types
 function Todo({ id, title }) {
   const [editing, setEditing] = useState(false);
-  const [newTitle, setNewTitle] = useState(title); // Changed to camelCase for consistency
+  const [newTitle, setNewTitle] = useState(title); 
   const dispatch = useDispatch(); // Added parentheses to call useDispatch
 
   function handleTodo() {

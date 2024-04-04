@@ -6,7 +6,7 @@
   }
   
   .todo.editing {
-    border: 2px solid blue; /* Example style when editing */
+    border: 2px solid blue; 
   }
   
   .todo-actions {
