@@ -1,0 +1,27 @@
+.todo {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .todo.editing {
+    border: 2px solid blue; /* Example style when editing */
+  }
+  
+  .todo-actions {
+    margin-top: 5px;
+  }
+  
+  .todo-actions button {
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  .todo-actions button.delete {
+    color: red;
+  }
+  
+  .todo-actions button.edit {
+    color: blue;
+  }
