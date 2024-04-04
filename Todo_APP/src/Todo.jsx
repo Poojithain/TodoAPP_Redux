@@ -1,6 +1,7 @@
 import  { useState } from 'react';
 import { editTodo,delTodo } from './Actions';
 import { useDispatch } from 'react-redux';
+import './Todo.css';
 
 // eslint-disable-next-line react/prop-types
 function Todo({ id, title }) {
@@ -19,23 +20,23 @@ function Todo({ id, title }) {
   }
 
   return (
-    <div>
-      {editing ? (
-        <div>
-          <input type="text" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} />
-          <button onClick={handleTodo}>Save</button> 
+    <div className={`todo ${editing ? 'editing' : ''}`}>
+    {editing ? (
+      <div>
+        <input type="text" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} />
+        <button onClick={handleTodo}>Save</button>
+      </div>
+    ) : (
+      <li>
+        <p>{title}</p>
+        <div className="todo-actions">
+          <button className="edit" onClick={() => setEditing(true)}>Edit</button>
+          <button className="delete" onClick={handleDel}>DELETE</button>
         </div>
-      ) : (
-        <li>
-          <p>{title}</p>
-          <div>
-            <button onClick={() => setEditing(true)}>Edit</button>
-            <button onClick={handleDel}>DELETE</button>
-          </div>
-        </li>
-      )}
-    </div>
-  );
+      </li>
+    )}
+  </div>
+);
 }
 
 export default Todo;
